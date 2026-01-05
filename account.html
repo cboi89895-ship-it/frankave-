@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="account-container centered-card">
+      <div class="auth-card">
+        <div class="tabs">
+          <button class="tab active" data-tab="signin">Sign in</button>
+          <button class="tab" data-tab="register">Create account</button>
+        </div>
+
+        <div class="tab-contents">
+          <div id="signin" class="tab-content active">
+            <h3 class="section-title">Sign in</h3>
+            <form id="login-form">
+              <label for="login-email">Email *</label>
+              <input id="login-email" type="email" placeholder="Enter your email" required>
+              <span class="field-error" id="err-login-email" aria-live="polite"></span>
+
+              <label for="login-password">Password *</label>
+              <div class="input-with-toggle">
+                <input id="login-password" type="password" placeholder="Enter your password" required>
+                <button type="button" class="toggle-pass" data-target="login-password" aria-label="Show password">👁️</button>
+              </div>
+              <span class="field-error" id="err-login-password" aria-live="polite"></span>
+
+              <button type="submit" class="btn-primary">SIGN IN</button>
+
+              <a href="#" id="forgot-link" class="forgot-link">Forgot your password?</a>
+
+              <form id="forgot-form" class="forgot-form" style="display:none; margin-top:10px;">
+                <label for="fp-email">Enter your account email</label>
+                <input id="fp-email" type="email" placeholder="name@domain.com">
+                <span class="field-error" id="err-fp-email"></span>
+                <button type="submit" class="btn-primary">Next</button>
+                <button type="button" id="cancel-forgot" class="clear-btn">Cancel</button>
+              </form>
+
+            </form>
+          </div>
+
+          <div id="register" class="tab-content">
+            <h3 class="section-title">Create account</h3>
+            <form id="register-form">
+              <label for="reg-first">First name *</label>
+              <input id="reg-first" type="text" placeholder="First name" required>
+              <span class="field-error" id="err-reg-first" aria-live="polite"></span>
+
+              <label for="reg-last">Last name *</label>
+              <input id="reg-last" type="text" placeholder="Last name" required>
+              <span class="field-error" id="err-reg-last" aria-live="polite"></span>
+
+              <label for="reg-phone">Phone</label>
+              <input id="reg-phone" type="tel" placeholder="0803xxxxxxx">
+              <span class="field-error" id="err-reg-phone" aria-live="polite"></span>
+
+              <label for="reg-email">Email *</label>
+              <input id="reg-email" type="email" placeholder="Enter your email" required>
+              <span class="field-error" id="err-reg-email" aria-live="polite"></span>
+
+              <label for="reg-password">Password *</label>
+              <div class="input-with-toggle">
+                <input id="reg-password" type="password" placeholder="Create a password" required>
+                <button type="button" class="toggle-pass" data-target="reg-password" aria-label="Show password">👁️</button>
+              </div>
+              <span class="field-error" id="err-reg-password" aria-live="polite"></span>
+
+              <button type="submit" class="btn-primary">CREATE ACCOUNT</button>
+
+              <div class="small-text" style="margin-top:10px;">By creating an account you agree to our <a href="#">Terms</a> and <a href="#">Privacy Policy</a>.</div>
+
+            </form>
+          </div>
+        </div>
+
+        <div id="auth-msg" class="auth-message" aria-live="polite"></div>
+      </div>
+    </div>
+
+    <script src="auth.js"></script>
+
+</body>
+</html>

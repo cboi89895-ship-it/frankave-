@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Create Account — Frankare Perfumes</title>
+</head>
+<body>
+  <header>
+    <h1>Frankare Perfumes</h1>
+    <div class="header-actions">
+      <div class="user-area">
+        <span id="user-avatar" class="avatar" aria-hidden="true"></span>
+        <a href="account.html" id="user-link">Login</a>
+      </div>
+
+      <a href="cart.html" id="cart-link">Cart <span id="cart-count">0</span></a>
+      <a href="index.html">Home</a>
+    </div>
+  </header>
+
+  <main class="account-container">
+    <h2 class="title">CREATE ACCOUNT</h2>
+
+    <div class="card">
+      <form id="register-form">
+        <label for="reg-first">First name *</label>
+        <input id="reg-first" type="text" placeholder="First name" required>
+        <span class="field-error" id="err-reg-first" aria-live="polite"></span>
+
+        <label for="reg-last">Last name *</label>
+        <input id="reg-last" type="text" placeholder="Last name" required>
+        <span class="field-error" id="err-reg-last" aria-live="polite"></span>
+
+        <label for="reg-phone">Phone</label>
+        <input id="reg-phone" type="tel" placeholder="0803xxxxxxx">
+        <span class="field-error" id="err-reg-phone" aria-live="polite"></span>
+
+        <label for="reg-email">Email *</label>
+        <input id="reg-email" type="email" placeholder="Enter your email" required>
+        <span class="field-error" id="err-reg-email" aria-live="polite"></span>
+
+        <label for="reg-password">Password *</label>
+        <div class="input-with-toggle">
+          <input id="reg-password" type="password" placeholder="Create a password" required>
+          <button type="button" class="toggle-pass" data-target="reg-password" aria-label="Show password">👁️</button>
+        </div>
+        <span class="field-error" id="err-reg-password" aria-live="polite"></span>
+
+        <button type="submit" class="btn-primary">CREATE ACCOUNT</button>
+
+        <div class="small-text" style="margin-top:10px;">Already have an account? <a href="account.html">Sign in</a></div>
+
+      </form>
+
+      <div id="auth-msg" class="auth-message" aria-live="polite"></div>
+    </div>
+
+  </main>
+
+  <script src="auth.js"></script>
+</body>
+</html>

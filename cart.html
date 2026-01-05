@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Cart — Frankare Perfumes</title>
+</head>
+<body>
+  <header>
+    <h1>Frankare Perfumes</h1>
+    <div class="header-actions">
+      <div class="user-area">
+        <span id="user-avatar" class="avatar" aria-hidden="true"></span>
+        <a href="account.html" id="user-link">Login / Register</a>
+      </div>
+      <a href="cart.html" id="cart-link">Cart <span id="cart-count">0</span></a>
+      <a href="index.html">Home</a>
+    </div>
+  </header>
+
+  <main class="cart-container">
+    <div class="cart-header">
+      <h2>Your Cart <span id="cart-items-count" class="item-count"></span></h2>
+      <div id="cart-note" class="cart-note"></div>
+    </div>
+
+    <div id="cart-items" class="cart-items">
+      <!-- items inserted here -->
+    </div>
+
+    <div id="cart-summary" class="cart-summary" style="display:none;">
+      <div>
+        <div class="total-label">Total</div>
+        <div id="cart-total">₦0</div>
+      </div>
+      <div>
+        <button id="clear-cart" class="clear-btn">Clear Cart</button>
+        <button id="checkout" class="checkout-btn">Checkout</button>
+      </div>
+    </div>
+
+  </main>
+
+<script src="auth.js"></script>
+<script src="cart.js"></script>
+</body>
+</html>
